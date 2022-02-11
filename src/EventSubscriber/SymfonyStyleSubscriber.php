@@ -31,7 +31,7 @@ final class SymfonyStyleSubscriber implements EventSubscriberInterface
 
     public function onStart(StartEvent $event): void
     {
-        $this->io->createProgressBar($event->getMaxSteps());
+        $this->io->progressStart($event->getMaxSteps());
     }
 
     public function onAdvance(AdvanceEvent $event): void
