@@ -23,7 +23,6 @@ final class SymfonyStyleCommandTest extends TestCase
         $command = new SymfonyStyleCommand(new EventDispatcher());
 
         $application = new Application();
-        $application->setAutoExit(false);
         $application->add($command);
 
         $commandTester = new CommandTester($command);

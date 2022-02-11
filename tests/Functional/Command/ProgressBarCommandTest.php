@@ -22,7 +22,6 @@ final class ProgressBarCommandTest extends TestCase
         $command = new ProgressBarCommand(new EventDispatcher());
 
         $application = new Application();
-        $application->setAutoExit(false);
         $application->add($command);
 
         $commandTester = new CommandTester($command);
