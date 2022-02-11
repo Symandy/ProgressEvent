@@ -21,6 +21,9 @@ final class ProgressBarSubscriber implements EventSubscriberInterface
         $this->progressBar = $progressBar;
     }
 
+    /**
+     * @return array<class-string, string>
+     */
     public static function getSubscribedEvents(): array
     {
         return [
