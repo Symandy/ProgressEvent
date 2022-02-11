@@ -1,0 +1,19 @@
+{
+    "name": "symandy/progress-event",
+    "description": "Events used in Symfony services to handle console progress bar",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samaël Villette",
+            "email": "villette.samael@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Symandy\\Component\\ProgressEvent\\": "src/"
+        }
+    }
+}
