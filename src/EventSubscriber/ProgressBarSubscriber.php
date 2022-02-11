@@ -9,9 +9,8 @@ use Symandy\Component\ProgressEvent\Event\ClearEvent;
 use Symandy\Component\ProgressEvent\Event\FinishEvent;
 use Symandy\Component\ProgressEvent\Event\StartEvent;
 use Symfony\Component\Console\Helper\ProgressBar;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-final class ProgressBarSubscriber implements EventSubscriberInterface
+final class ProgressBarSubscriber extends AbstractProgressBarSubscriber
 {
 
     private ProgressBar $progressBar;
@@ -19,19 +18,6 @@ final class ProgressBarSubscriber implements EventSubscriberInterface
     public function __construct(ProgressBar $progressBar)
     {
         $this->progressBar = $progressBar;
-    }
-
-    /**
-     * @return array<class-string, string>
-     */
-    public static function getSubscribedEvents(): array
-    {
-        return [
-            StartEvent::class => 'onStart',
-            AdvanceEvent::class => 'onAdvance',
-            FinishEvent::class => 'onFinish',
-            ClearEvent::class => 'onClear'
-        ];
     }
 
     public function onStart(StartEvent $event): void

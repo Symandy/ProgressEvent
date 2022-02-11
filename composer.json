@@ -15,16 +15,25 @@
         "symfony/console": "^4.4|^5.4|^6.0"
     },
     "require-dev": {
-        "phpstan/phpstan": "^1.4"
+        "phpstan/phpstan": "^1.4",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
             "Symandy\\Component\\ProgressEvent\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Symandy\\Tests\\Component\\ProgressEvent\\": "tests/"
+        }
+    },
     "scripts": {
         "analyse": [
             "vendor/bin/phpstan analyse"
+        ],
+        "test": [
+            "vendor/bin/phpunit"
         ]
     }
 }
