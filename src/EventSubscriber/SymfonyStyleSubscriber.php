@@ -20,6 +20,9 @@ final class SymfonyStyleSubscriber implements EventSubscriberInterface
         $this->io = $io;
     }
 
+    /**
+     * @return array<class-string, string>
+     */
     public static function getSubscribedEvents(): array
     {
         return [
@@ -31,7 +34,7 @@ final class SymfonyStyleSubscriber implements EventSubscriberInterface
 
     public function onStart(StartEvent $event): void
     {
-        $this->io->progressStart($event->getMaxSteps());
+        $this->io->progressStart($event->getMaxSteps() ?? 0);
     }
 
     public function onAdvance(AdvanceEvent $event): void

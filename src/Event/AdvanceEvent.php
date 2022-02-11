@@ -9,7 +9,7 @@ use Symfony\Contracts\EventDispatcher\Event;
 final class AdvanceEvent extends Event
 {
 
-    private ?int $step;
+    private int $step;
 
     public function __construct(int $step = 1)
     {
