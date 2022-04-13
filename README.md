@@ -19,6 +19,7 @@ composer require symandy/progress-event
 <?php
 
 use Symandy\Component\ProgressEvent\EventSubscriber\ProgressBarSubscriber;
+use Symandy\Component\ProgressEvent\EventSubscriber\SymfonyStyleSubscriber;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
